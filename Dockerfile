@@ -1,4 +1,3 @@
-FROM ubuntu:latest
-LABEL authors="serge"
+FROM php:8.2-fpm-bookworm
 
-ENTRYPOINT ["top", "-b"]
+RUN docker-php-ext-install pdo_mysql
